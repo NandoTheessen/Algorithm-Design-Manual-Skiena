@@ -9,7 +9,7 @@ _It's obvious_ never suffices and is often just **wrong**
 #### First Problem: Robot Tour Optimization
 
 - robot solders chips to the circuit-board && does this in a loop, board after board
-- task is to optimize the loop in order to minimize time spent per board
+- task is to optimize the loop in order to minimize ti04me spent per board
 
 Problem: Robot Tour Optimization
 Input: Set _S_ of _n_ points in the plane
@@ -42,6 +42,7 @@ Output: Shortes cycle tour that visits each point in the set _S_
 #### Closest Pair:
 
 Pseudo Code:
+
 ```
 _ClosestPair(P)_
     _n_ = number of points in set _P_
@@ -56,7 +57,8 @@ _ClosestPair(P)_
 
 - While less, has similar problems as closest point and can be off by >20% compared to an optimal solution for the problem (which is huge, imagine 20% more output on 1 million units)
 
-#### A correct approach to this problem: 
+#### A correct approach to this problem:
+
 ```
 OptimalTSP(P)
     d = inf
@@ -66,16 +68,17 @@ OptimalTSP(P)
 ```
 
 **Positives:**
-- Garuanteed to end up with a correct solution as we are looking at *all* possible path the robot can take
+
+- Garuanteed to end up with a correct solution as we are looking at _all_ possible path the robot can take
 
 **Negative:**
+
 - extremely slow!
-    - with even just 20 points we'd have to enumerate 20! orderings
-    - this would equate to 2 432 902 008 176 640 000 orderings or in words: a **whole** lot
-    - even todays super computers would take a long time to come up with a solution
-    - for real circuit boards w/ n = 1000, we'd never reach a solution
+  - with even just 20 points we'd have to enumerate 20! orderings
+  - this would equate to 2 432 902 008 176 640 000 orderings or in words: a **whole** lot
+  - even todays super computers would take a long time to come up with a solution
+  - for real circuit boards w/ n = 1000, we'd never reach a solution
 
-**This is called *the traveling salesman problem* (TSP)**
+**This is called _the traveling salesman problem_ (TSP)**
 
-**In general, there  is a fundamental difference between algorithms - wich *always* produce a correct result - and *heuristics*, which may usually do a good job but without providing any guarantee.** 
-
+**In general, there is a fundamental difference between algorithms - wich _always_ produce a correct result - and _heuristics_, which may usually do a good job but without providing any guarantee.**
